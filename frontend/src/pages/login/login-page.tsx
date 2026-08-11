@@ -114,41 +114,6 @@ export function LoginPage() {
       >
         {/* Left side: marketing copy */}
         <Col xs={24} md={12}>
-          <Space align="center" size={12} style={{ marginBottom: 32 }}>
-            <div
-              style={{
-                width: 40,
-                height: 40,
-                borderRadius: 10,
-                background:
-                  "linear-gradient(135deg, #1668dc 0%, #4e8ff7 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontWeight: 800,
-                fontSize: 18,
-                color: "#fff",
-              }}
-            >
-              X
-            </div>
-            <div>
-              <Text
-                type="secondary"
-                style={{
-                  fontSize: 11,
-                  textTransform: "uppercase",
-                  letterSpacing: 1,
-                  display: "block",
-                }}
-              >
-                Spider_XHS
-              </Text>
-              <Text strong style={{ fontSize: 14 }}>
-                Operations OS
-              </Text>
-            </div>
-          </Space>
 
           <Title
             level={2}
@@ -169,7 +134,7 @@ export function LoginPage() {
             发布统一在一个工作区里完成。
           </Paragraph>
 
-          <Row gutter={24}>
+          {/* <Row gutter={24}>
             <Col span={8}>
               <Statistic
                 title={
@@ -206,7 +171,7 @@ export function LoginPage() {
                 valueStyle={{ color: "#fff", fontSize: 28 }}
               />
             </Col>
-          </Row>
+          </Row> */}
         </Col>
 
         {/* Right side: login form */}

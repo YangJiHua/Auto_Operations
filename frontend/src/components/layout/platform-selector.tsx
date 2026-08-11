@@ -77,7 +77,7 @@ export function PlatformSelector({ platforms }: { platforms: PlatformMeta[] }) {
                       borderRadius: 4,
                     }}
                   >
-                    {platform.enabled ? "Active" : "Coming Soon"}
+                    {platform.enabled ? "启用" : "待开发"}
                   </Tag>
                   {platform.enabled ? (
                     <ArrowRightOutlined

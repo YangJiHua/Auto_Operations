@@ -8,31 +8,19 @@
 
 <div align="center">
 
-# XHS_ALL_IN_ONE
+# 一站式智能运营平台
 
-**小红书一站式智能运营平台 — 采集、分析、AI 创作、自动发布，全链路闭环**
-
-[![Skills](https://img.shields.io/badge/skills-supported-success)](https://github.com/cv-cat/XhsSkills)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-[![Node.js](https://img.shields.io/badge/nodejs-20%2B-green)](https://nodejs.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-19-61DAFB)](https://react.dev/)
-[![Docker](https://img.shields.io/badge/Docker-ready-2496ED)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
+**一站式智能运营平台 — 采集、分析、AI 创作、自动发布，全链路闭环**
 
 </div>
 
-> 市面上的小红书工具要么只能爬数据，要么只能发笔记，要么需要手动复制粘贴到 AI 平台再贴回来。
-> **XHS_ALL_IN_ONE 是第一个把「采集 → 内容库 → AI 改写 → 图片润色 → 一键发布 → 定时自动运营」全链路打通的开源平台。**
+> 目前只支持小红书平台，后续会添加更多平台（抖音、快手、微博、咸鱼、淘宝）。
+> **小红书一站式智能运营平台是一个把「采集 → 内容库 → AI 改写 → 图片润色 → 一键发布 → 定时自动运营」全链路打通的开源平台。**
 > 一个浏览器标签页，完成别人用 5 个工具才能做的事。
-
-**⚠️ 本项目仅供学习交流使用，禁止任何商业化行为，如有违反，后果自负**
-
----
 
 ## 核心优势
 
-| | 传统方案 | XHS_ALL_IN_ONE |
+| | 传统方案 | 一站式智能运营平台 |
 |---|---|---|
 | **数据采集** | 写脚本 / 用第三方爬虫 | 平台内搜索 + 一键入库，素材自动下载到本地 |
 | **内容管理** | Excel / 文件夹 / 各种笔记软件 | 统一内容库，标签筛选，卡片预览 |
@@ -60,7 +48,7 @@
 
 ### 内容库 — 采集内容的统一管理
 
-所有采集到的笔记统一沉淀在内容库，属于平台用户而非某个 XHS 账号。卡片/列表双视图，支持自定义标签、关键词搜索、批量操作、JSON/CSV 导出。
+所有采集到的笔记统一沉淀在内容库，属于平台用户而非某个小红书账号。卡片/列表双视图，支持自定义标签、关键词搜索、批量操作、JSON/CSV 导出。
 
 <img src="./static/frontend_3.jpg" width="600" />
 
@@ -90,25 +78,6 @@
 
 ---
 
-## ⭐ 完整功能清单
-
-### 底层 SDK（逆向签名算法，透明封装）
-
-| 模块 | 功能 | 状态 |
-|------|------|------|
-| **小红书 PC 端** | 二维码登录 / 手机验证码登录 | ✅ |
-| | 搜索笔记 & 搜索用户 | ✅ |
-| | 获取笔记详情（无水印图片 & 视频） | ✅ |
-| | 获取笔记评论 | ✅ |
-| | 获取用户发布 / 喜欢 / 收藏的笔记 | ✅ |
-| | 获取用户主页信息 / 自己的账号信息 | ✅ |
-| | 获取主页推荐 / 未读消息 | ✅ |
-| **创作者平台** | 二维码登录 / 手机验证码登录 | ✅ |
-| | 上传图集 / 视频作品 | ✅ |
-| | 查看已发布作品列表 | ✅ |
-| **蒲公英平台** | KOL 博主列表 & 粉丝画像 & 合作邀请 | ✅ |
-| **千帆平台** | 分销商列表 & 合作品类 / 商品信息 | ✅ |
-
 ### Web 运营平台
 
 | 模块 | 功能 |
@@ -127,28 +96,9 @@
 | **通知系统** | Cookie 过期 / 任务失败自动通知、铃铛实时展示 |
 | **模型配置** | 支持任意 OpenAI 兼容 API（火山引擎、阿里云百炼、OpenAI 中转等） |
 
-### 平台扩展（规划中）
-
-| 平台 | 状态 |
-|------|------|
-| 小红书 (XHS) | ✅ 已实现 |
-| 抖音 (Douyin) | Coming Soon |
-| 快手 (Kuaishou) | Coming Soon |
-| 微博 (Weibo) | Coming Soon |
-| 闲鱼 (Xianyu) | Coming Soon |
-| 淘宝 (Taobao) | Coming Soon |
-
 ---
 
-## 🧩 Skills 支持
-
-当前项目已支持基于 skills 的能力接入，可直接作为底层能力仓库使用，也可通过标准化 skills 方式被上层 Agent 工具链引入。
-
-封装好的 skills 请查看 [XhsSkills](https://github.com/cv-cat/XhsSkills)，可被 `Clawbot`、`Claude Code`、`Codex` 等工具直接引入与集成。
-
----
-
-## 🛠️ 快速开始
+## 🛠️ 部署
 
 ### 环境要求
 
@@ -158,9 +108,7 @@
 ### 安装依赖
 
 ```bash
-git clone https://github.com/cv-cat/XHS_ALL_IN_ONE.git
-cd XHS_ALL_IN_ONE
-
+cd xhs_auto
 pip install -r requirements.txt
 npm install
 cd frontend && npm install && cd ..
@@ -179,110 +127,4 @@ python main.py --with-frontend
 
 首次启动自动创建数据库，注册账号即可使用。
 
-### Docker 部署
-
-```bash
-docker compose up -d
-```
-
 ---
-
-## 📁 项目结构
-
-```
-XHS_ALL_IN_ONE/
-├── main.py                         # 统一启动入口
-├── config/                         # YAML 配置（default / production）
-├── apis/                           # XHS 底层 SDK（逆向签名 + HTTP 接口）
-├── xhs_utils/                      # 签名算法封装
-├── static/                         # 签名核心 JS 文件
-├── backend/
-│   └── app/
-│       ├── main.py                 # FastAPI 应用
-│       ├── core/                   # 配置、数据库、安全、时区
-│       ├── models/                 # SQLAlchemy 数据模型（20+ 张表）
-│       ├── api/                    # API 路由
-│       ├── services/               # 业务逻辑 + 定时调度
-│       ├── adapters/xhs/           # XHS SDK 适配层
-│       └── storage/                # 媒体文件 + 导出文件
-├── frontend/
-│   └── src/
-│       ├── pages/platforms/xhs/    # 各功能页面
-│       ├── components/layout/      # 侧边栏 + 通知系统
-│       ├── lib/api.ts              # HTTP 客户端
-│       └── types/                  # TypeScript 类型
-├── tests/                          # 后端测试（126 passed）
-├── Dockerfile                      # 多阶段构建
-└── docker-compose.yml              # 编排文件
-```
-
----
-
-## ⚙️ 配置说明
-
-分层配置，优先级：`config/default.yaml` < `CONFIG_FILE` < `.env` < 环境变量
-
-```yaml
-database:
-  type: "sqlite"                    # sqlite 或 mysql
-security:
-  secret_key: "change-me"          # JWT 签名密钥
-scheduler:
-  enabled: false                    # 启用定时任务（自动运营/监控/Cookie巡检）
-```
-
-主要环境变量：`SECRET_KEY`、`DATABASE_TYPE`、`DATABASE_URL`、`SCHEDULER_ENABLED`
-
----
-
-## 🗝️ 注意事项
-
-- `apis/` 是底层 SDK 层，**请勿直接修改**，上层通过 `backend/app/adapters/` 中转调用
-- Cookie 有时效性，平台内置 2 小时自动健康巡检 + 过期通知
-- 所有敏感数据（Cookie、API Key）使用 Fernet 加密存储
-- AI 功能需在「模型配置」页面配置 OpenAI 兼容的 API 端点（支持火山引擎、阿里云百炼等）
-
----
-
-## 🧸 额外说明
-
-1. 感谢 Star ⭐ 和 Follow，项目会持续更新
-2. 作者联系方式在主页，有问题随时联系
-3. 欢迎 PR 和 Issue，也欢迎关注作者其他项目
-
-<div align="center">
-  <img src="./author/wx_pay.png" width="380px" alt="微信赞赏码">
-  <img src="./author/zfb_pay.jpg" width="380px" alt="支付宝收款码">
-</div>
-
----
-
-## 📈 Star History
-
-
-<a href="https://cvcat.site/star-history/svg?repos=cv-cat/XHS_ALL_IN_ONE&type=Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cvcat.site/star-history/svg?repos=cv-cat/XHS_ALL_IN_ONE&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://cvcat.site/star-history/svg?repos=cv-cat/XHS_ALL_IN_ONE&type=Date" />
-    <img alt="Star History Chart" src="https://cvcat.site/star-history/svg?repos=cv-cat/XHS_ALL_IN_ONE&type=Date" />
-  </picture>
-</a>
-
----
-
-
-## 🍔 交流群
-
-如果你对爬虫和 AI Agent 感兴趣，请加作者主页 wx 通过邀请加入群聊
-
-ps: 请加群，人满或者过期 issue | wx 提醒
-
-| group-1 | group-2 | group-3 |
-|:--:|:--:|:--:|
-| <img width="280" alt="group1" src="https://cvcat.site/assets/group1.jpg" /> | <img width="280" alt="group2" src="https://cvcat.site/assets/group2.jpg" /> | <img width="280" alt="group3" src="https://cvcat.site/assets/group3.jpg" /> |
-
----
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.

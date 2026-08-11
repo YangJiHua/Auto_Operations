@@ -41,8 +41,9 @@ export function ComingSoonPage() {
             {platform.name_cn.slice(0, 1)}
           </div>
         }
-        title={`${platform.name_cn} 工作区即将开放`}
-        subTitle={`${platform.name_en} 已进入平台注册表。`}
+        title={`${platform.name_cn} 工作区待开发`}
+        //subTitle={`${platform.name_en} 已进入平台注册表。`}
+        subTitle={``}
         extra={
           <Button
             icon={<ArrowLeftOutlined />}
@@ -53,7 +54,7 @@ export function ComingSoonPage() {
         }
       >
         <Paragraph type="secondary" style={{ textAlign: "center", maxWidth: 480, margin: "0 auto" }}>
-          第一版先完整实现小红书链路，后续平台会沿用同一账号、任务、内容库和发布架构扩展。
+          目前已实现小红书链路，后续平台正在开发规划中。
         </Paragraph>
       </Result>
     </div>
