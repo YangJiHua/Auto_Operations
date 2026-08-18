@@ -29,7 +29,7 @@ def upgrade() -> None:
     sa.Column('creator_account_id', sa.Integer(), nullable=False),
     sa.Column('crawl_count', sa.Integer(), nullable=False),
     sa.Column('daily_publish_count', sa.Integer(), nullable=False),
-    sa.Column('ai_instruction', sa.Text(), nullable=False),
+    sa.Column('ai_instruction', sa.Text(), nullable=True),
     sa.Column('status', sa.String(length=32), nullable=False),
     sa.Column('last_run_at', sa.DateTime(), nullable=True),
     sa.Column('next_run_at', sa.DateTime(), nullable=True),

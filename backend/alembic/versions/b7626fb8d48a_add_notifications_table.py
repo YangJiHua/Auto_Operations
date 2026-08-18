@@ -24,7 +24,7 @@ def upgrade() -> None:
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=256), nullable=False),
-    sa.Column('body', sa.Text(), nullable=False),
+    sa.Column('body', sa.Text(), nullable=True),
     sa.Column('level', sa.String(length=16), nullable=False),
     sa.Column('source_task_id', sa.Integer(), nullable=True),
     sa.Column('source_type', sa.String(length=32), nullable=True),

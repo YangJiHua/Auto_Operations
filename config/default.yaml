@@ -1,7 +1,7 @@
 server:
   host: "0.0.0.0"
-  port: 8000
-  cors_origins: "http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173"
+  port: 33331
+  cors_origins: "http://localhost:33332,http://localhost:3000,http://127.0.0.1:33332"
 
 database:
   type: "mysql"

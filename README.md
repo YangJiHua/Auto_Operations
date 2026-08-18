@@ -122,8 +122,8 @@ python main.py --with-frontend
 ```
 
 启动后访问：
-- 前端: http://localhost:5173
-- API 文档: http://localhost:8000/docs
+- 前端: http://localhost:33332
+- API 文档: http://localhost:33331/docs
 
 首次启动自动创建数据库，注册账号即可使用。
 
