@@ -14,7 +14,7 @@ client = TestClient(app)
 def test_health_endpoint_returns_ok():
     response = client.get("/api/health")
     assert response.status_code == 200
-    assert response.json() == {"status": "ok", "service": "spider-xhs"}
+    assert response.json() == {"status": "ok", "service": "success"}
 
 
 def test_platforms_endpoint_exposes_product_registry():

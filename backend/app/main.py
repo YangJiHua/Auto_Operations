@@ -44,7 +44,7 @@ def create_app() -> FastAPI:
 
     @app.get("/api/health", tags=["health"])
     def health() -> dict:
-        return {"status": "ok", "service": "spider-xhs"}
+        return {"status": "ok", "service": "success"}
 
     app.include_router(registry.router, prefix="/api")
     app.include_router(auth.router, prefix="/api")

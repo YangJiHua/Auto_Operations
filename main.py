@@ -18,6 +18,7 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--reload", action="store_true", help="Enable Uvicorn reload.")
     parser.add_argument("--with-frontend", action="store_true", help="Also start the frontend Vite dev server.")
     parser.add_argument("--frontend-port", type=int, default=33332, help="Frontend dev server port.")
+    parser.add_argument("--log-level", default="info", help="Uvicorn log level (e.g. debug, info, warning).")
     return parser.parse_args(argv)
 
 
@@ -68,7 +69,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     try:
         import uvicorn
 
-        uvicorn.run("backend.app.main:app", host=host, port=port, reload=args.reload)
+        uvicorn.run("backend.app.main:app", host=host, port=port, reload=args.reload, log_level=args.log_level)
     finally:
         if frontend_process and frontend_process.poll() is None:
             frontend_process.terminate()
