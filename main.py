@@ -14,10 +14,10 @@ ROOT = Path(__file__).resolve().parent
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Start the Spider_XHS product platform.")
     parser.add_argument("--host", default="127.0.0.1", help="Backend host.")
-    parser.add_argument("--port", type=int, default=33331, help="Backend port.")
+    parser.add_argument("--port", type=int, default=22221, help="Backend port.")
     parser.add_argument("--reload", action="store_true", help="Enable Uvicorn reload.")
     parser.add_argument("--with-frontend", action="store_true", help="Also start the frontend Vite dev server.")
-    parser.add_argument("--frontend-port", type=int, default=33332, help="Frontend dev server port.")
+    parser.add_argument("--frontend-port", type=int, default=22223, help="Frontend dev server port.")
     parser.add_argument("--log-level", default="info", help="Uvicorn log level (e.g. debug, info, warning).")
     return parser.parse_args(argv)
 
@@ -58,7 +58,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         # Use config values only when CLI args are at their defaults
         if host == "127.0.0.1" and settings.server_host:
             host = settings.server_host
-        if port == 33331 and settings.server_port:
+        if port == 22221 and settings.server_port:
             port = settings.server_port
     except Exception:
         pass

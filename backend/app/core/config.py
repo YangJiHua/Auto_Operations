@@ -99,10 +99,10 @@ class Settings(BaseSettings):
 
     # Server
     server_host: str = "0.0.0.0"
-    server_port: int = 33331
+    server_port: int = 22221
 
     # CORS
-    backend_cors_origins: str = "http://127.0.0.1:33332,http://localhost:33332"
+    backend_cors_origins: str = "http://127.0.0.1:22223,http://localhost:22223"
 
     # Scheduler
     scheduler_enabled: bool = False
